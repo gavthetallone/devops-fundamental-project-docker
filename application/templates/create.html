@@ -1,0 +1,20 @@
+
+{% extends 'layout.html' %}
+
+{% block title %}
+    Create/Update
+{% endblock title %}
+
+{% block body %}
+<form action="" method="POST", style="background-color:#e4fdff">
+    {{ form.hidden_tag() }}
+    <br>
+    {% block form_contents %}}
+    
+
+    {% endblock form_contents%}
+    <br>
+    {{ form.submit }}
+    <hr>
+</form>
+{% endblock body %}

@@ -1,0 +1,41 @@
+<head>
+    <title>🏈 NFL Fantasy Football!</title>
+</head>
+<body>
+    <font face="Trebuchet MS">
+    <h1 style="text-align: center;">
+        🏈&emsp;🏈&emsp;🏈&emsp;🏈&emsp;Welcome to NFL Fantasy Football!&emsp;🏈&emsp;🏈&emsp;🏈&emsp;🏈&emsp;🏈
+    </h1>
+    <hr style="height:2px;border-width:0;color:black;background-color:black">
+    
+    <h2>
+    {% block title %}
+    {% endblock title %}
+    </h2>
+
+    <style>
+        .tab2 {
+            display: inline;
+            margin-left: 10;
+        }
+    </style>
+
+    <div class="navbar">
+        <h3>
+        <a href="{{ url_for('home') }}">Home</a>
+        <span class="tab2"></span>
+
+        <a href="{{ url_for('create_league') }}">Create New League</a>
+        <span class="tab2"></span>
+
+        <a href="{{ url_for('create_team') }}">Create New Team</a>
+        <span class="tab2"></span>
+
+        <a href="{{ url_for('create_player') }}">Create New Player</a>
+        </h3>
+        <hr>
+    </div>
+    {% block body %}
+    {% endblock body %}
+    </font>
+</body>
