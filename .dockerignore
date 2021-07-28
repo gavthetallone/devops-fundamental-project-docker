@@ -1,0 +1,7 @@
+images/
+tests/
+.gitignore
+initial-crud.md
+LICENSE
+README.md
+**/__pycache__.py
