@@ -1,3 +1,5 @@
+docker stop $(docker ps -a -q)
+docker rm $(docker ps -a -q)
 
 docker rm -f nfl-fantasy
 docker image rm -f gavthetallone/nfl-fantasy:latest
