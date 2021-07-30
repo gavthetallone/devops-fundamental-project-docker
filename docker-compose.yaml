@@ -1,0 +1,30 @@
+version: "3.8"
+services:
+  nfl-fantasy-db:
+    container_name: nfl-fantasy-db
+    image: mysql:latest
+    volumes:
+    - type: volume
+      source: nfl-fantasy-volume
+      target: /var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD:
+      MYSQL_DATABASE:
+  nfl-fantasy:
+    container_name: nfl-fantasy
+    build: ./
+    environment:
+      DATABASE_URI:
+  nfl-fantasy-proxy:
+    container_name: nfl-fantasy-proxy
+    image: nginx:latest
+    ports:
+    - target: 80
+      published: 80
+      protocol: tcp
+    volumes:
+    - type: bind
+      source: ./nginx/nginx.conf
+      target: /etc/nginx/nginx.conf
+volumes:
+  nfl-fantasy-volume:
