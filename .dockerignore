@@ -5,3 +5,4 @@ initial-crud.md
 LICENSE
 README.md
 **/__pycache__.py
+deploy.sh
