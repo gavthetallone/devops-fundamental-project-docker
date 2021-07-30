@@ -1,6 +1,6 @@
 data.db
 test.db
-deploy.sh
+.deploy.sh
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
